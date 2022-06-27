@@ -10,20 +10,20 @@
     <h1>Euro to USD</h1>
     <div id="output">
       <form method="POST">
-        € <input type="number"
-               name="euros"
-               step=".01"
-               min="0.01"
-               placeholder="Euros"
+        <input type="text"
+               name="sentence_input"
+
+               placeholder="Write your sentence"
                required
                >
         <input type="submit"
                value="Convert">
       </form>
-      {% if usd %}
+      {% if sentiment %}
       <h3>
-        €{{euros}} =
-        ${{usd}}
+        €{{sentiment}}
+        ${{new_text}}
+        ${{top}}
       </h3>
       {% endif %}
     </div>

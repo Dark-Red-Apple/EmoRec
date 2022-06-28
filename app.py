@@ -26,9 +26,9 @@ def form():
 
 @app.route("/", methods=["POST"])
 def my_form_post():
-    c = CurrencyConverter()
+    # c = CurrencyConverter()
     # print("Output" + request.form["sentence_input"])
-    input_ids = tokenizer(request.form["sentence_input"])
+    input_ids = input_ids = tokenizer(request.form["sentence_input"], return_tensors='tf')
     tokens = tokenizer.convert_ids_to_tokens(input_ids['input_ids'][0])
     preds = model(input_ids)
     sentiment = model.config.id2label[preds[0][0].numpy().argmax()]
@@ -41,7 +41,7 @@ def my_form_post():
     top = freq.most_common(4)
 
     for sub, val in new_set:
-        tokens = [word if word != sub else '**' + word + '**' for word in tokens]
+        tokens = [word if word != sub else '<b>' + word + '</b>' for word in tokens]
     # usd = round(c.convert(euros, "EUR", "USD"), 2)
 
     new_text = tokenizer.convert_tokens_to_string(tokens)

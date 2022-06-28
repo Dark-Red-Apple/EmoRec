@@ -1,8 +1,9 @@
-FROM python:3.8-slim
+FROM python:3.10.1-slim
 # Use the python latest image
 COPY . ./
 # Copy the current folder content into the docker image
-RUN pip install flask nltk transformers tensorflow currencyconverter
+RUN pip install --upgrade pip && \
+pip install flask nltk transformers tensorflow 
 # Install the required packages of the application
 CMD gunicorn --bind :$PORT app:app
 # Bind the port and refer to the app.py app

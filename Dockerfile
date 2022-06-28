@@ -12,7 +12,8 @@ FROM tensorflow/tensorflow
 
 # Install production dependencies.
 ADD requirements.txt .
-RUN pip install -r requirements.txt
+COPY requirements.txt /tmp/requirements.txt
+RUN ["pip", "install", "-r", "/tmp/requirements.txt"]
 RUN pip install flask gunicorn CurrencyConverter
 
 # Copy local code to the container image.

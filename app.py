@@ -1,7 +1,7 @@
 # import os
 
-from flask import Flask
-from flask import render_template, request
+# from flask import Flask
+# from flask import render_template, request
 # from currency_converter import CurrencyConverter
 
 # import matplotlib.pyplot as plt
@@ -15,7 +15,7 @@ from flask import render_template, request
 #     "./saved_model")
 # tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 
 @app.route("/")

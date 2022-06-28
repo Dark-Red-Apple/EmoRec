@@ -2,7 +2,7 @@ FROM python:3.8-slim
 # Use the python latest image
 COPY . ./
 # Copy the current folder content into the docker image
-RUN pip install flask nltk transformers
+RUN pip install flask nltk==3.7 transformers==4.20.0 tensorflow==2.9.1
 # Install the required packages of the application
 CMD gunicorn --bind :$PORT app:app
 # Bind the port and refer to the app.py app

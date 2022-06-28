@@ -9,7 +9,7 @@ from flask import render_template, request
 # from nltk.corpus import stopwords
 from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
 import string
-nltk.download("stopwords")
+# nltk.download("stopwords")
 
 # model = TFDistilBertForSequenceClassification.from_pretrained(
 #     "./saved_model")

@@ -33,7 +33,7 @@ html * {
   border-radius: 5px;
 }
 
-#form input[type=sumbit]{
+#form input[type=submit]{
   display: block;
     width: 8em;
     /* height: 2em; */
@@ -48,14 +48,15 @@ html * {
   display: flex;
   grid-column: 1/6;
   width: 100%;
-  border: 1px solid gray;
+  border: 2px solid #d6dce4;
+  border-radius: 4px;
 }
 
-.result-main:first-child{
+.result-main>div:first-child{
   width: 50%;
 }
-.result-main:last-child{
-  border-left: 1px solid gray;
+.result-main>div:last-child{
+  border-left: 2px solid #d6dce4;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -72,21 +73,28 @@ html * {
 }
 .sent span{
   background: #d6dce4;
-  padding: 11px 12px;
+  padding: 15px 12px;
   border-radius: 4px;
   border: none;
-  line-height: 11px;
+  line-height: 15px;
   font-size: 15px;
+  height: 15px;
 }
 
 .freg-hig{
-  border-top: 1px solid gray;
+  border-top: 2px solid #d6dce4;
+  text-align: left;
+  padding: 10px 0 0 10px;
+}
+.freg-hig p{
+  text-align: left;
+  margin: 0 0 10px 0;
 }
 .freg-hig{
-  border-top: 1px solid gray;
+  border-top: 2px solid #d6dce4;
 }
 .freq-res{
-  border-left: 1px solid gray;
+  border-left: 2px solid #d6dce4;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -94,9 +102,10 @@ html * {
 }
 .freq-res table {
   border-collapse: collapse;
+  border: 2px solid gainsboro;
 }
 .freq-res table td, .freq-res table th {
-  border: 1px solid black;
+  border: 2px solid gainsboro;
 }
 .freq-res table tr:first-child th {
   border-top: 0;

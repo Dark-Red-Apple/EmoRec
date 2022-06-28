@@ -5,8 +5,8 @@
             type= "text/css"
             href="{{url_for('static',
                   filename=
-                  'styles/style.css')}}">
-                  <meta name="viewport" content="width=400 initial-scale=1.0 user-scalable=yes, maximum-scale=3.0, minimum-scale=2.0">
+                  './styles/style.css')}}">
+                  <!-- <meta name="viewport" content="width=400 initial-scale=1.0 user-scalable=yes, maximum-scale=3.0, minimum-scale=2.0"> -->
   </head>
   <body>
     <div id="container-main">
@@ -18,10 +18,10 @@
                required
                > </textarea>
         <input class="submit-button" type="submit"
-               value="Convert">
+               value="Show Result">
       </form>
       {% if sentiment %}
-      <div class = "result-main" >
+      <div class="result-main">
         <div>
           <div class="sent">
             <p>The sentiment of the above text is:</p>

@@ -1,9 +1,8 @@
-FROM python:3.10-slim
+FROM python:3.8-slim
 # Use the python latest image
 COPY . ./
 # Copy the current folder content into the docker image
-# Run pip install --upgrade pip && \
-RUN pip install flask 
+RUN pip install flask gunicorn currencyconverter
 # Install the required packages of the application
 CMD gunicorn --bind :$PORT app:app
 # Bind the port and refer to the app.py app

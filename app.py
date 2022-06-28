@@ -7,9 +7,9 @@ from flask import render_template, request
 # # import matplotlib.pyplot as plt
 # import nltk
 # from nltk.corpus import stopwords
-# from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
-# import string
-# nltk.download("stopwords")
+from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
+import string
+nltk.download("stopwords")
 
 # model = TFDistilBertForSequenceClassification.from_pretrained(
 #     "./saved_model")

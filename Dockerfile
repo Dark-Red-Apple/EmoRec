@@ -13,6 +13,7 @@ FROM tensorflow/tensorflow
 # Install production dependencies.
 ADD requirements.txt .
 RUN pip install -r requirements.txt
+RUN pip install flask gunicorn CurrencyConverter
 
 # Copy local code to the container image.
 WORKDIR /app

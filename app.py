@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 from flask import render_template, request
-from currency_converter import CurrencyConverter
+# from currency_converter import CurrencyConverter
 
 import matplotlib.pyplot as plt
 import nltk

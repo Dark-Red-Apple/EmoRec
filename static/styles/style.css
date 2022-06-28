@@ -106,6 +106,7 @@ html * {
 }
 .freq-res table td, .freq-res table th {
   border: 2px solid gainsboro;
+  padding: 5px 0 5px 0;
 }
 .freq-res table tr:first-child th {
   border-top: 0;

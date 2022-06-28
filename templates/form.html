@@ -1,31 +1,33 @@
 <html>
+  
   <head>
       <link rel= "stylesheet"
             type= "text/css"
             href="{{url_for('static',
                   filename=
                   'styles/style.css')}}">
+                  <meta name="viewport" content="width=400 initial-scale=1.0 user-scalable=yes, maximum-scale=3.0, minimum-scale=2.0">
   </head>
   <body>
-    <div id="output">
-      <form method="POST">
+    <div id="container-main">
+      <form method="POST" id="form">
         <textarea 
                name="sentence_input"
 
                placeholder="Write your sentence"
                required
                > </textarea>
-        <input type="submit"
+        <input class="submit-button" type="submit"
                value="Convert">
       </form>
       {% if sentiment %}
-      <div>
+      <div class = "result-main" >
         <div>
-          <div class="div">
+          <div class="sent">
             <p>The sentiment of the above text is:</p>
             <span>{{sentiment}}</span>
           </div>
-          <div class="div">
+          <div class="freg-hig">
             <p>The text with the most frequent word highlighted:</p>
             <span>       
               {% autoescape off %}
@@ -34,7 +36,7 @@
           </span>
           </div>
         </div>
-        <div>
+        <div class="freq-res">
           <h5>Word Frequency:</h5>
           <table>
             <tr>

@@ -1,10 +1,10 @@
-import os
+# import os
 
 from flask import Flask
 from flask import render_template, request
 # from currency_converter import CurrencyConverter
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import nltk
 from nltk.corpus import stopwords
 from transformers import AutoTokenizer, TFDistilBertForSequenceClassification

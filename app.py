@@ -11,8 +11,8 @@ from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
 import string
 nltk.download("stopwords")
 
-model = TFDistilBertForSequenceClassification.from_pretrained(
-    "./saved_model")
+# model = TFDistilBertForSequenceClassification.from_pretrained(
+#     "./saved_model")
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
 app = Flask(__name__)
@@ -28,7 +28,7 @@ def form():
 def my_form_post():
     # c = CurrencyConverter()
     # print("Output" + request.form["sentence_input"])
-    input_ids = input_ids = tokenizer(request.form["sentence_input"], return_tensors='tf')
+    input_ids = tokenizer(request.form["sentence_input"], return_tensors='tf')
     tokens = tokenizer.convert_ids_to_tokens(input_ids['input_ids'][0])
     preds = model(input_ids)
     sentiment = model.config.id2label[preds[0][0].numpy().argmax()]

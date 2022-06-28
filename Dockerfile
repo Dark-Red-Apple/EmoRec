@@ -3,7 +3,7 @@ FROM python:3.10.1-slim
 COPY . ./
 # Copy the current folder content into the docker image
 RUN pip install --upgrade pip && \
-pip install flask nltk transformers tensorflow 
+pip install flask 
 # Install the required packages of the application
 CMD gunicorn --bind :$PORT app:app
 # Bind the port and refer to the app.py app

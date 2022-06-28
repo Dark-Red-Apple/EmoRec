@@ -1,11 +1,21 @@
 FROM python:3.8-slim
-
-
-
-ENV PYTHONUNBUFFERED True
-ENV APP_HOME /app 
-WORKDIR $APP_HOME
+# Use the python latest image
 COPY . ./
+# Copy the current folder content into the docker image
+RUN pip install flask gunicorn currencyconverter
+# Install the required packages of the application
+CMD gunicorn --bind :$PORT app:app
+# Bind the port and refer to the app.py app
+
+
+# FROM python:3.8-slim
+
+
+
+# ENV PYTHONUNBUFFERED True
+# ENV APP_HOME /app 
+# WORKDIR $APP_HOME
+# COPY . ./
 
 # RUN pip install flask tensorflow matplotlib nltk transformers
 # Run pip install --upgrade pip && \
@@ -104,7 +114,7 @@ COPY . ./
 # COPY requirements.txt /tmp/requirements.txt
 # RUN ["pip", "install", "-r", "/tmp/requirements.txt"]
 # RUN pip install flask gunicorn CurrencyConverter
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
 
 # Copy local code to the container image.
 # WORKDIR /app
@@ -118,5 +128,5 @@ RUN pip install -r requirements.txt
 # webserver, with one worker process and 8 threads.
 # For environments with multiple CPU cores, increase the number of workers
 # to be equal to the cores available.
-CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 app:app
+# CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 app:app
 

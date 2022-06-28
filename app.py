@@ -1,19 +1,19 @@
 import os
 
-from flask import Flask
-from flask import render_template, request
-# from currency_converter import CurrencyConverter
+# from flask import Flask
+# from flask import render_template, request
+# # from currency_converter import CurrencyConverter
 
-# import matplotlib.pyplot as plt
-import nltk
-from nltk.corpus import stopwords
-from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
-import string
-nltk.download("stopwords")
+# # import matplotlib.pyplot as plt
+# import nltk
+# from nltk.corpus import stopwords
+# from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
+# import string
+# nltk.download("stopwords")
 
-model = TFDistilBertForSequenceClassification.from_pretrained(
-    "./saved_model")
-tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+# model = TFDistilBertForSequenceClassification.from_pretrained(
+#     "./saved_model")
+# tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
 app = Flask(__name__)
 

@@ -5,11 +5,11 @@ from flask import render_template, request
 # from currency_converter import CurrencyConverter
 
 # import matplotlib.pyplot as plt
-import nltk
-from nltk.corpus import stopwords
+# import nltk
+# from nltk.corpus import stopwords
 from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
 import string
-nltk.download("stopwords")
+# nltk.download("stopwords")
 
 # model = TFDistilBertForSequenceClassification.from_pretrained(
 #     "./saved_model")

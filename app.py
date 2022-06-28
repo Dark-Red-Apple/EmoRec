@@ -1,4 +1,4 @@
-import os
+# import os
 
 from flask import Flask
 from flask import render_template, request
@@ -6,7 +6,7 @@ from flask import render_template, request
 
 # # import matplotlib.pyplot as plt
 import nltk
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 # from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
 # import string
 # nltk.download("stopwords")

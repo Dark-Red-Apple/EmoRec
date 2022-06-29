@@ -10,8 +10,7 @@ import string
 nltk.download("stopwords")
 # # import matplotlib.pyplot as plt
 
-model = TFDistilBertForSequenceClassification.from_pretrained("./saved_model/config.json",force_download=True)
-# tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+
 # try:    
 
 # except Exception as e:
@@ -32,6 +31,8 @@ def form():
 def my_form_post():
     # c = CurrencyConverter()
     # print("Output" + request.form["sentence_input"])
+    model = TFDistilBertForSequenceClassification.from_pretrained("./saved_model/config.json",force_download=True)
+    # tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
     input_ids = tokenizer(request.form["sentence_input"], return_tensors='tf')
     tokens = tokenizer.convert_ids_to_tokens(input_ids['input_ids'][0])
     preds = model(input_ids)

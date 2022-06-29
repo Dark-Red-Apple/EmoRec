@@ -10,7 +10,7 @@ import string
 nltk.download("stopwords")
 # # import matplotlib.pyplot as plt
 
-model = TFDistilBertForSequenceClassification.from_pretrained("/", local_files_only=True)
+model = TFDistilBertForSequenceClassification.from_pretrained("./saved_model", local_files_only=True)
 # tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 # try:    
 

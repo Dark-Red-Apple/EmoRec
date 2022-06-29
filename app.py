@@ -11,6 +11,10 @@ from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
 import string
 nltk.download("stopwords")
 
+model = TFDistilBertForSequenceClassification.from_pretrained(
+    "./saved_model")
+tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+
 app = Flask(__name__)
 
 

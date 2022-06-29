@@ -1,5 +1,5 @@
 {
-  "_name_or_path": "./saved_model",
+  "_name_or_path": "/saved_model",
   "activation": "gelu",
   "architectures": [
     "DistilBertForSequenceClassification"

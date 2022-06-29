@@ -1,4 +1,4 @@
-FROM python:3.10.1-slim
+FROM python:3.8-slim
 # Use the python latest image
 COPY . ./
 # Copy the current folder content into the docker image

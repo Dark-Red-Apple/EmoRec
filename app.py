@@ -12,10 +12,10 @@ nltk.download("stopwords")
 
 # model = TFDistilBertForSequenceClassification.from_pretrained("/saved_model")
 # tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
-try:    
+# try:    
 
-except Exception as e:
-    print(e)
+# except Exception as e:
+#     print(e)
 
 
 

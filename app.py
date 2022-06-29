@@ -1,22 +1,15 @@
-# import os
+import os
 
 from flask import Flask
 from flask import render_template, request
-# # from currency_converter import CurrencyConverter
+# from currency_converter import CurrencyConverter
+
+# import matplotlib.pyplot as plt
 import nltk
 from nltk.corpus import stopwords
 from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
 import string
 nltk.download("stopwords")
-# # import matplotlib.pyplot as plt
-
-
-# try:    
-
-# except Exception as e:
-#     print(e)
-
-
 
 app = Flask(__name__)
 
@@ -31,8 +24,6 @@ def form():
 def my_form_post():
     # c = CurrencyConverter()
     # print("Output" + request.form["sentence_input"])
-    model = TFDistilBertForSequenceClassification.from_pretrained("./saved_model/config.json",force_download=True)
-    # tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
     input_ids = tokenizer(request.form["sentence_input"], return_tensors='tf')
     tokens = tokenizer.convert_ids_to_tokens(input_ids['input_ids'][0])
     preds = model(input_ids)
@@ -56,4 +47,4 @@ def my_form_post():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

@@ -9,9 +9,11 @@ from transformers import AutoTokenizer, TFDistilBertForSequenceClassification
 import string
 nltk.download("stopwords")
 # # import matplotlib.pyplot as plt
+
+model = TFDistilBertForSequenceClassification.from_pretrained("/saved_model")
+tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 try:    
-    model = TFDistilBertForSequenceClassification.from_pretrained("/saved_model")
-    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+
 except Exception as e:
     print(e)
 

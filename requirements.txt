@@ -3,3 +3,4 @@ uwsgi
 nltk==3.7
 transformers==4.20.0
 #tensorflow==2.9.1
+tensorflow-cpu
